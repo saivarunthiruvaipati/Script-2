@@ -1,0 +1,4 @@
+def inputDate = message.getProperty("inputDate") // e.g., 2025-07-23
+def formatted = inputDate.replaceAll("(\\d{4})-(\\d{2})-(\\d{2})", '$2/$3/$1')
+message.setProperty("formattedDate", formatted)
+return message
